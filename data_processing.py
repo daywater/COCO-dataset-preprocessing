@@ -4,7 +4,7 @@ import json
 import pandas as pd
 import numpy as np
 
-video_dir='B20_human11_Camera_1.avi'
+video_dir=sys.argv[]
 gt_dir="AlphaPose_B20_human11_Camera_1.csv"
 gt = pd.read_csv(gt_dir, encoding='big5')
 gt = gt.iloc[:,1:-2]
@@ -87,4 +87,4 @@ while cap.isOpened():
         print(a)
     count+=1
     count_gt+=1
-json.dump(aa,open('result.json', 'w'))
+json.dump(aa,open('person_keypoints_train2017.json', 'w'))
